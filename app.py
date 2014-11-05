@@ -17,13 +17,26 @@ def login():
 		p = accounts.find_one({"username": username})
 		if p != None :
 			if p["password"] == password:
-				render_template();
+				render_template("login.html")
+				#render_template();"""
+		else:
+			return render_template("login.html")
 	else:
 		return render_template("login.html");
 
-@app.routej("/register")
+@app.route("/register", methods = ['GET','POST'])
 def register():
-	
+	if request.method == 'POST':
+		username = request.form['username']
+		password = request.form['password']
+		if username == None or password == None :
+			pass
+		else:
+			newacc = {"username" : username, "password": password}
+			accounts.insert(newacc)
+		return render_template("login.html")
+	else:
+		return render_template("Register.html")
 
 
 
