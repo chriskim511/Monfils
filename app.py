@@ -17,7 +17,14 @@ def login():
 		p = accounts.find_one({"username": username})
 		if p != None :
 			if p["password"] == password:
-				render_template()
+				render_template();
+	else:
+		return render_template("login.html");
+
+@app.routej("/register")
+def register():
+	
+
 
 
 
