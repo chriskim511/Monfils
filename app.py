@@ -42,6 +42,7 @@ def failedregister():
 @app.route("/index", methods = ['GET','POST'])
 def index():
 	if request.method == 'POST':
+		print request.form
 		username = request.form['username']
 		password = request.form['password']
 		p = accounts.find_one({"username": username})
@@ -63,6 +64,8 @@ def index():
 @app.route("/profile",methods=['GET','POST'])
 def profile():
 	if request.method == 'POST':
+		OptionRadios = request.form['OptionRadios']
+		print OptionRadios
 		p = accounts.find_one({"_id":post_id})
 		#if p==None:
 			#print True
