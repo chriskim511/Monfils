@@ -6,7 +6,7 @@
 </head>
 <body>
 <h1>Login Failed, Please Try Again</h1>
-	<a href = "/login"> Login </a></p>
+	<a href = "/Login"> Login </a></p>
 
 </body>
 </html>

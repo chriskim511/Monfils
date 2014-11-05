@@ -11,7 +11,7 @@
 	<h1> Hello Username,</h1>
 	<h1> Need to Update Account info? </h1>
 	<h2> Relationship Status </h2>
-  <form class="pure-form" action="/profile" method="POST">
+  <form class="pure-form" action="/profile">
     
     <label for="option-one" class="pure-radio">
         <input id="option-one" type="radio" name="OptionsRadios" value="option1" checked>
