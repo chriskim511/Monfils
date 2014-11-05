@@ -15,12 +15,12 @@ def login():
 		password = request.form['password']
 
 		p = accounts.find_one({"username": username})
-		if p != None :
+		if p != None:
 			if p["password"] == password:
 				render_template("login.html")
 				#render_template();"""
 		else:
-			return render_template("login.html")
+			return render_template("failedlogin.html")
 	else:
 		return render_template("login.html");
 
@@ -29,12 +29,14 @@ def register():
 	if request.method == 'POST':
 		username = request.form['username']
 		password = request.form['password']
-		if username == None or password == None :
-			pass
+		print username
+		print password
+		if username=="" or password=="":
+			return render_template("failedregister.html")
 		else:
 			newacc = {"username" : username, "password": password}
 			accounts.insert(newacc)
-		return render_template("login.html")
+			return render_template("login.html")
 	else:
 		return render_template("Register.html")
 

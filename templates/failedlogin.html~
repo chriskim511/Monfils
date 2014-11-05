@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <head>
   
-  <title>Registration Failed</title>
+  <title>Login Failed</title>
   <link rel="stylesheet" href="../static/style.css">
 </head>
 <body>
 <h1>Registration Failed, Please Try Again</h1>
-	<a href = "/register"> Register </a></p>
+	<a href = "/Login"> Login </a></p>
 
 </body>
 </html>
